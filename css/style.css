@@ -1,0 +1,155 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+/* Form */
+.formBlock{
+  font-family: 'Open Sans', sans-serif;
+
+  margin: 5% auto;
+  width: 80%; 
+  height: 100%; 
+
+}
+.formBlock .header{
+  color: white; 
+  font-family:arial;
+
+  padding-top: 1%;
+  border-bottom: 2px solid white; 
+}
+
+.formBlock .container{
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.formBlock .container img{
+  width: 90%;
+}
+.formBlock .container u{
+  color: white;
+}
+.formBlock .container p{
+  color: white;
+}
+
+.formBlock .container a{
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  padding: 3% 20px 0px 20px;
+  margin:7% 10% 10% 10%;
+  display: inline-block;
+  float: center;
+  text-decoration: none;
+  width: 80%; height: 60px; 
+
+  background-color: none;
+  /*background-color: #00b359;*/
+
+  position: relative;
+
+  border: 5px solid #fff;
+  border-radius: 10px;
+}
+
+.formBlock .container a:hover {
+  background-color:#fff;
+  color: #00b359;
+}
+
+/*
+#tornaIndietro{
+  background-color: #808080; 
+  -webkit-box-shadow: 0 3px #666666; 
+  -moz-box-shadow: 0 3px #595959; 
+  box-shadow: 0 3px #595959;
+}
+#tornaIndietro:hover{
+   background-color:#595959;
+}*/
+#bordoTabella table, th, td {
+    border: 1px solid black;
+}
+.parDropDown{
+  font-size: 1.3em;
+  color: #fff;
+}
+
+.colorTab{
+  background-color: #ccffdd;
+  /*color: white;*/
+}
+
+/*
+.number{
+  font-size:38px !important;
+  font-weight:800;
+  margin-bottom:0 !important;
+
+}*/
+.margineMenu{
+  margin-left:13.9%;
+}
+
+#immaginiPercorsi{
+  width: 100%;
+  border-bottom:2px solid white; 
+  border-top:2px solid white; 
+}

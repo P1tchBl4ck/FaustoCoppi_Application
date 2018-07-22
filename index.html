@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>La Fausto Coppi</title>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <!-- Css Background-->
+  <style type="text/css">
+    i.fb_icon{
+      background-image:url("images/fb_icon.png");
+    }
+    i.ig_icon{
+      background-image:url("images/ig_icon.png");
+    }
+    i.yt_icon{
+      background-image:url("images/yt_icon.png");
+    }
+    i.tw_icon{
+      background-image:url("images/tw_icon.png");
+      /*width: 0.3em;
+      height: 0.3em;
+      padding: 10%;*/
+    }
+    .social_icon{
+      width: 1.5em;
+      height: 1.5em;
+      border: 0.2em solid white;
+      padding: 0; /*5%*/
+    }
+    .social_icon:hover{
+      padding: 0;
+      border-color: #00753a;
+    }
+    i.social_icon{
+      background-size: 130%;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 25%;
+    }
+
+    body{
+      background-image: url("images/backgroundHome.jpg") !important; 
+    }
+    .rowup{
+      /*border: 5px solid white;*/
+      border-bottom: 0;
+      border-radius: 20px;
+    }
+    .rowdown{
+      /*border: 5px solid white;*/
+      border-top: 0;
+      margin-top: -10%;
+      border-radius: 20px;
+    }
+    /*.demo{
+      font-size: 1rem;
+    }*/
+    div.contatore{
+      color: #ffffff;
+      font-family: arial;
+      padding- top: 2%;
+      /*background-color: white;
+      border-radius: 2%;
+      border: 1px solid gray;
+      color: #00b359;*/
+   }
+   td.timetable{
+    border: 0 solid transparent;
+    font-size: 0.8em;
+    padding: 0;
+   }
+
+   .noBordoSopra{
+    border-bottom: 4px solid white;
+   }
+  .noBordoSotto{
+    border-top: 4px solid white;
+  }
+
+  </style>
+
+</head>
+<body>
+
+<!--Menu-->
+  <script type="text/javascript" src="includes/menu.js"></script>
+
+  <!-- Form -->
+  <div class="formBlock">
+    <center class="header">
+          <h3><b>HOME</b> <!--  <i class="small material-icons">directions_bike</i>--></h3>
+          <!--<i class="medium material-icons">directions_bike</i>-->
+          <img style="width: 20%;" src="images/directions_bike.png"></img>
+
+    </center>
+    <div class="container">
+      <a onclick="window.open('http://www.faustocoppi.net/new/');">
+         SITO WEB
+      </a>
+      <a onclick="window.open('edizione2018.html','_self');">
+        Edizione 2018
+      </a>
+
+      <a onclick="window.open('percorsi.html','_self');">
+        Percorsi
+      </a>
+
+      <!--Num che si incrementa, come nel sito
+       <span class="number">4125</span> 
+        Contatore
+       -->
+       <div class="contatore">
+          Tempo mancante alla gara:
+          <p id="demo" style="font-family: 'Open Sans'"></p>
+
+          
+          <script>
+          // Set the date we're counting down to
+          var countDownDate = new Date("Jul 9, 2018 09:00:00").getTime();
+
+          // Update the count down every 1 second
+          var x = setInterval(function() {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            if(hours < 10) hours = "0" + (hours);
+            if(minutes < 10) minutes = "0" + (minutes);
+            if(seconds < 10) seconds = "0" + (seconds);
+            document.getElementById("demo").innerHTML = 
+              "<div class=\"row rowup\">" +
+                "<div class=\"col s3 noBordoSotto\">Giorni</div>" +
+                "<div class=\"col s3 noBordoSotto\">Ore</div>" +
+                "<div class=\"col s3 noBordoSotto\">Minuti</div>" + 
+                "<div class=\"col s3 noBordoSotto\">Secondi</div>" +
+              "</div>" + 
+              "<div class=\"row rowdown\">" +
+                "<div class=\"col s3 noBordoSopra\">" + days + "</div>" +
+                "<div class=\"col s3 noBordoSopra\">" + hours + "</div>" +
+                "<div class=\"col s3 noBordoSopra\">" + minutes + "</div>" +
+                "<div class=\"col s3 noBordoSopra\">" + seconds + "</div>" +
+              "</div>";
+
+            // If the count down is finished, write some text 
+            if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+          }, 1000);
+          </script>
+
+          <!--<div class="progress">
+            <div class="indeterminate"></div>
+          </div>-->
+        </div>
+
+    </div>
+  </div>
+  <div class="footer">
+    <div class="social">
+      <center>
+        <i onclick="window.open('https://www.facebook.com/LaFaustoCoppi')" class="social_icon small material-icons fb_icon"></i>
+        <i onclick="window.open('https://twitter.com/LaFaustoCoppi')" class="social_icon small material-icons tw_icon"></i>
+        <i onclick="window.open('https://www.instagram.com/la_fausto_coppi/')" class="social_icon small material-icons ig_icon"></i>
+        <i onclick="window.open('https://www.youtube.com/channel/UCLzKGDDpdyksegjsyFhWxIw')" class="social_icon small material-icons yt_icon"></i>
+      </center>
+    </div>
+        <br>
+            <br>
+    <div style="background-color:white;">
+
+    <center>
+      <img src="images/partners.gif" alt="HTML5 Icon" style="height:60px;">
+      </center>
+    </div>
+    <div class="copyright">
+      
+    </div>
+  </div>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  </body>
+</html>
